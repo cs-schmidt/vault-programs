@@ -9,7 +9,7 @@
 /**
  * Name: longestPalindromicSubstr
  * Algorithmic Paradigm: Optimized Brute Force
- * Programming Paradigm: Imperative
+ * Programming Paradigm: Declarative
  * Complexity:
  *  - Time Complexity (Best Case): O(n)
  *  - Time Complexity (Worst Case): O(n^2)

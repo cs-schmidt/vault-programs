@@ -1,6 +1,6 @@
 /**
  * Problem 5: Longest Palindromic Substring
- * 
+ *
  * Constraints:
  *  1. 1 <= s.length <= 1000
  *  2. s consist of only digits and English letters.
@@ -36,8 +36,6 @@ function longestPalindrome(str: string): string {
   // Internal Helpers
   // ======================================================================
   function maxPalindromeAtMid(str: string, mid: number, even: boolean = false): number[] {
-    if (str.length == 0) return [NaN, NaN];
-    if (mid < 0 || mid > str.length - 1) return [NaN, NaN];
     if (even && str[mid] != str[mid + 1]) return [NaN, NaN];
     let lower = mid;
     let upper = even ? mid + 1 : mid;

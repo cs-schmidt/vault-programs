@@ -11,7 +11,7 @@
 /**
  * Name: `longestPalindromicSubstr`
  * Algorithmic Paradigm: Bottom-Up 2D Dynamic Programming
- * Programming Paradigm: Declarative
+ * Programming Paradigm: Imperative
  * Complexity:
  *  - Time Complexity: O(n^2)
  *  - Space Complexity: O(n) auxilary space
@@ -21,43 +21,32 @@ function longestPalindrome(str: string): string {
   if (str.length <= 1) return str;
   if (str.length == 2) return str[0] == str[1] ? str : str[0];
 
-  // Initialize memo by traversing through the state space.
+  // Traverse through the 2D state space.
   let result = '';
   let column = 0;
   let length = str.length - column;
   let lower = 0;
   let upper = 0;
-  const memos: number[][] = [];
-  while (column < 2) {
-    const memo: number[] = [];
+  const memo: number[][] = [Array(str.length).fill(1), Array(str.length - 1).fill(1)];
+  while (column < str.length) {
+    const states: number[] = [];
+    const subStates: number[] = memo.shift() as number[];
     for (let i = 0; i < length; i++) {
-      if (str[lower] == str[upper]) {
-        if (result.length < 1 + column) result = str.slice(lower, upper + 1);
-        if (inMemoRange(lower, upper, column, length, str.length)) memo.push(1);
-      } else if (inMemoRange(lower, upper, column, length, str.length)) memo.push(0);
+      if (str[lower] == str[upper] && subStates[i]) {
+        if (result.length < 1 + column) result = str.substring(lower, upper + 1);
+        if (inMemoRange(lower, upper, column, length, str.length)) states.push(1);
+      } else if (inMemoRange(lower, upper, column, length, str.length)) states.push(0);
       lower += 1;
       upper += 1;
     }
     column += 1;
-    length = str.length - column;
+    length += str.length - column;
     lower = 0;
     upper = column;
-    memos.unshift(memo);
+    memo.push(states);
   }
 
-  // Iterate through more solutions.
-  // while (column < str.length) {
-  //   const subproblems = memos.pop();
-  //   const memo: number[] = [];
-  //   for (let i = 0; i < length; i++) {
-  //     if (str[lower] == str[upper]) {
-  //     }
-  //   }
-  // }
-
   return result;
-
-  // - Subproblem: dp[i][j] == 1 if and only if dp[i+1][j-1] == 1 and s[i] == s[j].
 
   // Internal Helpers
   // ======================================================================
@@ -67,7 +56,7 @@ function longestPalindrome(str: string): string {
     column: number,
     length: number,
     size: number
-  ) {
+  ): boolean {
     return column < lower + upper && lower + upper < length + size - 2;
   }
 }

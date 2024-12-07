@@ -13,7 +13,8 @@
  * Algorithmic Paradigm: Bottom-Up 2D Dynamic Programming
  * Programming Paradigm: Imperative
  * Complexity:
- *  - Time Complexity: O(n^2)
+ *  - Time Complexity (Best Case): O(n)
+ *  - Time Complexity (Worst Case): O(n^2)
  *  - Space Complexity: O(n) auxilary space
  */
 function longestPalindrome(str: string): string {

@@ -7,7 +7,7 @@
  */
 
 /**
- * Name: longestPalindromicSubstr
+ * Function: longestPalindromicSubstr
  * Algorithmic Paradigm: Optimized Brute Force
  * Programming Paradigm: Declarative
  * Complexity:

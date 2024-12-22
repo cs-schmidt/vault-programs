@@ -2,9 +2,9 @@
 Problem 714: Best Time to Buy and Sell Stock with Transaction Fee
 
 Constraints:
-1. 1 <= prices.length <= 5 * 10^4
-2. 1 <= prices[i] < 5 * 10^4
-3. 0 <= fee < 5 * 10^4
+    1. 1 <= prices.length <= 5 * 10^4
+    2. 1 <= prices[i] < 5 * 10^4
+    3. 0 <= fee < 5 * 10^4
 """
 
 
@@ -15,8 +15,8 @@ class Solution:
         Algorithmic Paradigm: Bottom-Up 2D Dynamic Programming
         Programming Paradigm: Imperative
         Complexity:
-            - Time Complexity: O(n).
-            - Space Complexity: O(1) auxiliary space.
+            - Time (Mean): O(n).
+            - Space (Mean): O(1) auxiliary space.
         """
         if len(prices) <= 1: return 0
         maxGainWithBuy = -prices[0]
@@ -28,10 +28,14 @@ class Solution:
         return max(maxGainWithBuy, maxGainWithSell)
 
 
-# Base Cases:
-#  1. MP(0,b) == -p[0].
-#  2. MP(0,s) == 0.
+"""
+Dynamic Programming Outline:
+======================================================================
+Base Cases:
+    1. MP(0,b) == -p[0].
+    2. MP(0,s) == 0.
 
-# Subproblems:
-#  1. MP(i,b) == max{MP(0,s), ... , MP(i-1,s)} - p[i].
-#  2. MP(i,s) == max{MP(0,b), ... , MP(i-1,b)} + p[i] - 2.
+Subproblems:
+    1. MP(i,b) == max{MP(0,s), ... , MP(i-1,s)} - p[i].
+    2. MP(i,s) == max{MP(0,b), ... , MP(i-1,b)} + p[i] - 2.
+"""

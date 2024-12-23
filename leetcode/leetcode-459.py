@@ -6,8 +6,9 @@ Constraints:
     2. str contains only lowercase English letters.
 """
 
-# TODO: Improve solution's time complexity.
-# NOTE: There's an alternative approach with O(1) auxiliary space and better time.
+# TODO: Improve time and space complexity.
+# TODO: Correct the stated time and space complexities. 
+# TODO: Create an alternative solution to this problem.
 
 from collections import deque
 

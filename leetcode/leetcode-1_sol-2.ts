@@ -8,9 +8,13 @@
  *   4. Only one valid answer exists.
  */
 
+// NOTE: Making `numIdxMap` a plain JS object without a prototype chain enhances the
+//       performance of the "in" operator. This approach seems to render optimal time
+//       complexity for this problem. Using a Map type seems to diminish performance.
+
 /**
  * Function: findTwoSum
- * Algorithmic Paradigm: Hashing (Greedy)
+ * Algorithmic Paradigm: Greedy w/ One-Pass Hashing
  * Programming Paradigm: Imperative
  * Complexity:
  *   - Time (Worst): O(n).
@@ -19,12 +23,11 @@
  *   - Space (Best): O(1) auxiliary space.
  */
 function twoSum(nums: number[], target: number): number[] {
-  const numIdxMap = {};
+  const numIdxMap = Object.create(null);
   for (let idx = 0; idx < nums.length; idx++) {
-    const num = nums[idx];
     const complement = target - nums[idx];
-    if (numIdxMap[complement] != undefined) return [numIdxMap[complement], idx];
-    if (numIdxMap[num] == undefined) numIdxMap[num] = idx;
+    if (complement in numIdxMap) return [numIdxMap[complement], idx];
+    if (!(nums[idx] in numIdxMap)) numIdxMap[nums[idx]] = idx;
   }
   return [];
 }

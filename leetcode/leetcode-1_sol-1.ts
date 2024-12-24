@@ -10,7 +10,7 @@
 
 /**
  * Function: findTwoSum
- * Algorithmic Paradigm: Brute-Force
+ * Algorithmic Paradigm: Brute-Force w/ Two Pointer Technique
  * Programming Paradigm: Imperative
  * Complexity:
  *   - Time (Worst): O(n^2).

@@ -6,18 +6,20 @@
  *  2. s consist of only digits and English letters.
  */
 
-// TODO: Complete solution.
-// NOTE: See https://cp-algorithms.com/string/manacher.html to implement Manacher's
-//       Algorithm
+// TODO: Finish solution (Manacher's Algorithm version).
+
+// See https://cp-algorithms.com/string/manacher.html for Manacher's Algorithm info.
 
 /**
  * Name: `longestPalindromicSubstr`
  * Algorithmic Paradigm: ???
  * Programming Paradigm: ???
  * Complexity:
- *  - Time Complexity: O(n)
- *  - Space Complexity: O(1) auxilary space
+ *   - Time (Mean): ???
+ *   - Space (Mean): ???
  */
 function longestPalindrome(str: string): string {
   return '';
 }
+
+export {};

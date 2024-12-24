@@ -2,18 +2,18 @@
  * Problem 5: Longest Palindromic Substring
  *
  * Constraints:
- *  1. 1 <= s.length <= 1000
- *  2. s consist of only digits and English letters.
+ *   1. 1 <= s.length <= 1000
+ *   2. s consist of only digits and English letters.
  */
 
 /**
  * Function: longestPalindromicSubstr
- * Algorithmic Paradigm: Optimized Brute Force
+ * Algorithmic Paradigm: Optimized Brute-Force
  * Programming Paradigm: Declarative
  * Complexity:
- *  - Time Complexity (Best Case): O(n)
- *  - Time Complexity (Worst Case): O(n^2)
- *  - Space Complexity: O(1) auxiliary space.
+ *   - Time (Worst): O(n^2).
+ *   - Time (Best): O(n).
+ *   - Space (Mean): O(1) auxiliary space.
  */
 function longestPalindrome(str: string): string {
   if (str.length <= 1) return str;
@@ -50,3 +50,5 @@ function longestPalindrome(str: string): string {
     return pair[1] - pair[0] + 1;
   }
 }
+
+export {};

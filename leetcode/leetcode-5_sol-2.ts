@@ -6,16 +6,16 @@
  *  2. s consist of only digits and English letters.
  */
 
-// TODO: Complete solution.
+// TODO: Finish solution (DP version).
 
 /**
- * Name: `longestPalindromicSubstr`
+ * Name: longestPalindromicSubstr
  * Algorithmic Paradigm: Bottom-Up 2D Dynamic Programming
  * Programming Paradigm: Imperative
  * Complexity:
- *  - Time Complexity (Best Case): O(n)
- *  - Time Complexity (Worst Case): O(n^2)
- *  - Space Complexity: O(n) auxilary space
+ *  - Time (Worst): O(n^2).
+ *  - Time (Best): O(n).
+ *  - Space (Mean): O(n) auxilary space.
  */
 function longestPalindrome(str: string): string {
   // Handle edge cases.
@@ -61,3 +61,5 @@ function longestPalindrome(str: string): string {
     return column < lower + upper && lower + upper < length + size - 2;
   }
 }
+
+export {};

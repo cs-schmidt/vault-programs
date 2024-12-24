@@ -16,7 +16,6 @@
  *   - Space (Worst): O(n) auxiliary space.
  *   - Space (Best): O(1) auxiliary space.
  */
-
 /**
  * @param {string} s
  * @returns {number}

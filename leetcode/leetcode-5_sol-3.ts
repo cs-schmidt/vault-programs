@@ -1,6 +1,8 @@
 /**
  * Problem 5: Longest Palindromic Substring
  *
+ * Version: Manacher's Algorithim
+ *
  * Constraints:
  *  1. 1 <= s.length <= 1000
  *  2. s consist of only digits and English letters.

@@ -1,6 +1,8 @@
 /**
  * Problem 1: Two Sum
  *
+ * Version: Original
+ *
  * Constraints:
  *   1. 2 <= nums.length <= 10^4
  *   2. -10^9 <= nums[i] <= 10^9

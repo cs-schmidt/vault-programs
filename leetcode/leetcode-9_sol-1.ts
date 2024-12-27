@@ -1,6 +1,8 @@
 /**
  * Problem 9: Palindrome Number
  *
+ * Version: Original
+ *
  * Constraints:
  *   1. -2^31 <= int <= 2^31 - 1.
  */

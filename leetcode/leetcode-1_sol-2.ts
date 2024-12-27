@@ -1,6 +1,8 @@
 /**
  * Problem 1: Two Sum
  *
+ * Version: Optimized
+ *
  * Constraints:
  *   1. 2 <= nums.length <= 10^4
  *   2. -10^9 <= nums[i] <= 10^9
@@ -8,9 +10,9 @@
  *   4. Only one valid answer exists.
  */
 
-// NOTE: Making `numIdxMap` a plain JS object without a prototype chain enhances the
-//       performance of the "in" operator. This approach seems to render optimal time
-//       complexity for this problem. Using a Map type seems to diminish performance.
+// Making `numIndexMap` a plain JS object without a prototype chain will enhance the
+// performance of the "in" operator. This approach appears to render optimal time
+// complexity for this problem. Using a Map type seems to diminish performance here.
 
 /**
  * Function: findTwoSum
@@ -23,11 +25,11 @@
  *   - Space (Best): O(1) auxiliary space.
  */
 function twoSum(nums: number[], target: number): number[] {
-  const numIdxMap = Object.create(null);
-  for (let idx = 0; idx < nums.length; idx++) {
-    const complement = target - nums[idx];
-    if (complement in numIdxMap) return [numIdxMap[complement], idx];
-    if (!(nums[idx] in numIdxMap)) numIdxMap[nums[idx]] = idx;
+  const numIndexMap = Object.create(null);
+  for (let index = 0; index < nums.length; index++) {
+    const complement = target - nums[index];
+    if (complement in numIndexMap) return [numIndexMap[complement], index];
+    if (!(nums[index] in numIndexMap)) numIndexMap[nums[index]] = index;
   }
   return [];
 }

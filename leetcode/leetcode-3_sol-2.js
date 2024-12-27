@@ -1,5 +1,7 @@
 /**
  * Problem 3: Longest Substring Without Repeating Characters
+ * 
+ * Version: Optimized
  *
  * Constraints:
  *   1. 0 <= s.length <= 5 * 10^4

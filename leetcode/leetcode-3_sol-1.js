@@ -1,12 +1,12 @@
 /**
  * Problem 3: Longest Substring Without Repeating Characters
  *
+ * Version: Original
+ *
  * Constraints:
  *   1. 0 <= s.length <= 5 * 10^4
  *   2. s consists of English letters, digits, symbols and spaces.
  */
-
-// NOTE: Performance improves when a map is used over of a plain JS object.
 
 /**
  * Function: maxDiverseSubstrLength

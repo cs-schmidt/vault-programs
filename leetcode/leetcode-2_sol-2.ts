@@ -1,13 +1,15 @@
 /**
  * Problem 2: Add Two Numbers
  *
+ * Version: Optimized
+ *
  * Constraints:
  *   1. The number of nodes in each linked list is in the range [1, 100].
  *   2. 0 <= Node.val <= 9
  *   3. It's guaranteed that the list represents a number that doesn't have leading zeros.
  */
 
-// TODO: Finish solution (optimal complexity version).
+// TODO: Finish solution (optimized version).
 
 /** Represents a node in a singly-linked list. */
 class ListNode {

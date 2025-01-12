@@ -16,6 +16,6 @@ def createDataframe(student_data: list[list[int]]) -> pd.DataFrame:
     Programming Paradigm: Declarative
     Complexity:
         Time: O(pd.DataFrame).
-        Space: O(pd.DataFrame) w/ O(1) auxiliary.
+        Space: O(pd.DataFrame) w/ Θ(1) auxiliary.
     """
     return pd.DataFrame(data=student_data, columns=["student_id", "age"])

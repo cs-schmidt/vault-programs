@@ -12,8 +12,7 @@ Constraints:
 
 # TODO: Finish solution.
 
-# NOTE: This algorithm was initially accepted, but threw an error after retesting. It's
-#       still incorrect.
+# NOTE: This question appears to be broken in LeetCode.
 
 
 class Solution:
